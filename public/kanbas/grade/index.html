@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grades</title>
+</head>
+<body>
+<table valign="top">
+    <tbody>
+    <tr>
+        <td valign="top">
+            <ul>
+                <li><a href="../profile">Account</a></li>
+                <li><a href="#">DashBoard</a></li>
+                <li><a href="../home">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </td>
+
+        <td valign="top">
+            <ul>
+                <li><a href="../home">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="../assignments">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="index.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </td>
+
+        <td valign="top">
+            <select id="gradebook">
+                <option value="GradeBook">gradebook</option>
+            </select>
+            <button>import</button>
+            <select id="export">
+                <option value="export">export</option>
+            </select>
+            <button>Configure</button>
+
+            <h3>Student Names</h3>
+            <input type="student"
+                   placeholder="Search Student"
+                   id="text-fields-student"/>
+
+            <h3>Assignment Names</h3>
+            <input type="assignment"
+                   placeholder="Search assignment"
+                   id="text-fields-assignment"/><br>
+
+            <button>Apply Filters</button>
+
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Student Names</th>
+                        <th>A1 SETUP out of 100</th>
+                        <th>A2 HTML out of 100</th>
+                        <th>A3 CSS out of 100</th>
+                        <th>A4 BOOTSTRAP out of 100</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Alice Wonderland</th>
+                        <th>98</th>
+                        <th><input type="text" maxlength="4"size="4"></th>
+                        <th>90</th>
+                        <th>92</th>
+                    </tr>
+                    <tr>
+                        <th>Mike Scott</th>
+                        <th>98</th>
+                        <th><input type="text" maxlength="4"size="4"></th>
+                        <th>90</th>
+                        <th>92</th>
+                    </tr>
+                    <tr>
+                        <th>Kevin Gates</th>
+                        <th>68</th>
+                        <th><input type="text" maxlength="4"size="4"></th>
+                        <th><input type="text" maxlength="4"size="4"></th>
+                        <th>72</th>
+                    </tr>
+                    <tr>
+                        <th>Bill Bryson</th>
+                        <th><input type="text" maxlength="4"size="4"></th>
+                        <th>82</th>
+                        <th>84</th>
+                        <th><input type="text" maxlength="4"size="4"></th>
+                    </tr>
+                </tbody>
+            </table>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
