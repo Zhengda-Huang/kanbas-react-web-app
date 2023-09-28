@@ -1,0 +1,18 @@
+.point {
+    padding-left: 40px;
+}
+
+.row label{
+    direction: rtl;
+    /*padding-left: 150px;*/
+    padding-left: -100px;
+}
+.check-assignment {
+    direction: rtl;
+    padding-right: 50px;
+}
+
+.bottom-content {
+    padding-right: 150px;
+}
+

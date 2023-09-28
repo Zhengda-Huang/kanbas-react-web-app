@@ -1,0 +1,32 @@
+.wd-dashboard{
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard {
+    flex-grow: 1;
+}
+
+.wd-left-side-navigation .dashboard-icon{
+    color: red;
+    background-color: white;
+}
+
+.dashboard .cards{
+    margin: 20px;
+}
+.cards card-img-top{
+    background-color: #0a53be;
+}
+
+.dashboard{
+    margin-left: 30px;
+}
+
+.wd-dashboard a{
+    text-decoration: none;
+}
+
+hr {
+    width: 100%;
+}

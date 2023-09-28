@@ -1353,7 +1353,7 @@ bars:
       - list
       - menu
       - nav
-      - navigation
+      - kanbas-navigation
       - ol
       - reorder
       - settings
@@ -4629,7 +4629,7 @@ compass:
       - directory
       - location
       - menu
-      - navigation
+      - kanbas-navigation
       - safari
       - travel
   styles:
@@ -5635,7 +5635,7 @@ directions:
   search:
     terms:
       - map
-      - navigation
+      - kanbas-navigation
       - sign
       - turn
   styles:
@@ -6249,7 +6249,7 @@ ellipsis-h:
       - list
       - menu
       - nav
-      - navigation
+      - kanbas-navigation
       - ol
       - reorder
       - settings
@@ -6271,7 +6271,7 @@ ellipsis-v:
       - list
       - menu
       - nav
-      - navigation
+      - kanbas-navigation
       - ol
       - reorder
       - settings
@@ -11836,7 +11836,7 @@ location-arrow:
       - direction
       - gps
       - map
-      - navigation
+      - kanbas-navigation
       - place
   styles:
     - solid
@@ -12116,7 +12116,7 @@ map:
       - localize
       - location
       - map
-      - navigation
+      - kanbas-navigation
       - paper
       - pin
       - place
@@ -12142,7 +12142,7 @@ map-marked:
       - localize
       - location
       - map
-      - navigation
+      - kanbas-navigation
       - paper
       - pin
       - place
@@ -12167,7 +12167,7 @@ map-marked-alt:
       - localize
       - location
       - map
-      - navigation
+      - kanbas-navigation
       - paper
       - pin
       - place
@@ -12193,7 +12193,7 @@ map-marker:
       - localize
       - location
       - map
-      - navigation
+      - kanbas-navigation
       - paper
       - pin
       - place
@@ -12218,7 +12218,7 @@ map-marker-alt:
       - localize
       - location
       - map
-      - navigation
+      - kanbas-navigation
       - paper
       - pin
       - place
@@ -12247,7 +12247,7 @@ map-pin:
       - location
       - map
       - marker
-      - navigation
+      - kanbas-navigation
       - pin
       - place
       - position
@@ -15705,7 +15705,7 @@ route:
   search:
     terms:
       - directions
-      - navigation
+      - kanbas-navigation
       - travel
   styles:
     - solid
@@ -18057,7 +18057,7 @@ street-view:
       - directions
       - location
       - map
-      - navigation
+      - kanbas-navigation
   styles:
     - solid
   unicode: f21d

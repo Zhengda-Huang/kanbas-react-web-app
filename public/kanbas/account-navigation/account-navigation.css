@@ -1,0 +1,19 @@
+.middle-nav {
+    width: 190px;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-nav .highlight{
+    color: black;
+    border-left: solid;
+
+}
+
+.middle-nav a {
+    display: block;
+    margin-right: 15px;
+    padding: 10px;
+    color: red;
+}

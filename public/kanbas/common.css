@@ -1,0 +1,14 @@
+a{
+    color: inherit;
+    text-decoration: none
+}
+
+a:hover {
+    color: inherit; /* Set the color for hover state (same as normal color) */
+}
+
+
+li{
+    list-style-type: none;
+}
+

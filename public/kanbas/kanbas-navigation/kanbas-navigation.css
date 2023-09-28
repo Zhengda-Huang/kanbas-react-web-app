@@ -1,0 +1,54 @@
+
+.wd-left-side-navigation{
+    height: 100%;
+    display: flex;
+    width: 85px;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.wd-left-side-navigation a {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+}
+
+.wd-left-side-navigation li{
+    display: flex;
+    flex-direction: column;
+}
+
+.wd-left-side-navigation img{
+    width: 60px;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+.wd-left-side-navigation li{
+    margin-bottom: 10px;
+}
+
+.wd-left-side-navigation .highlight{
+    background-color: white;
+}
+
+.wd-left-side-navigation .highlight a{
+    color: red;
+}
+
+a{
+    color: inherit;
+    text-decoration: none
+}
+
+a:hover {
+    color: inherit; /* Set the color for hover state (same as normal color) */
+}
+
