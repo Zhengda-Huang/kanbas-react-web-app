@@ -1,0 +1,13 @@
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px; /* Adjust the size of the circle as needed */
+    height: 25px; /* Adjust the size of the circle as needed */
+    background-color: green;
+    border-radius: 50%; /* Creates a circle shape */
+}
+
+.check-icon {
+    color: white; /* Change the color of the check icon */
+}

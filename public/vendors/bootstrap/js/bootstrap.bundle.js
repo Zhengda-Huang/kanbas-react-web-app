@@ -4081,7 +4081,7 @@
 
           if (composedPath.includes(context._element) || context._config.autoClose === 'inside' && !isMenuTarget || context._config.autoClose === 'outside' && isMenuTarget) {
             continue;
-          } // Tab kanbas-navigation through the dropdown menu or events from contained inputs shouldn't close the menu
+          } // Tab kanbas-old-navigation through the dropdown menu or events from contained inputs shouldn't close the menu
 
 
           if (context._menu.contains(event.target) && (event.type === 'keyup' && event.key === TAB_KEY$1 || /input|select|option|textarea|form/i.test(event.target.tagName))) {
@@ -6033,7 +6033,7 @@
     offset: [0, 8],
     trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>'
+    template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-Header"></h3>' + '<div class="popover-body"></div>' + '</div>'
   };
   const DefaultType$2 = { ...Tooltip.DefaultType,
     content: '(string|element|function)'
@@ -6050,7 +6050,7 @@
     MOUSEENTER: `mouseenter${EVENT_KEY$3}`,
     MOUSELEAVE: `mouseleave${EVENT_KEY$3}`
   };
-  const SELECTOR_TITLE = '.popover-header';
+  const SELECTOR_TITLE = '.popover-Header';
   const SELECTOR_CONTENT = '.popover-body';
   /**
    * ------------------------------------------------------------------------

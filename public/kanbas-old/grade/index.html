@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grades</title>
+    <link href="../common.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link href="../kanbas-navigation/kanbas-navigation.css" rel="stylesheet">
+    <link href="../account-navigation/account-navigation.css" rel="stylesheet">
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel=stylesheet>
+</head>
+</head>
+<body>
+
+<div class="flex-profile d-flex flex-row">
+    <div class="wd-left-side-navigation me-4">
+        <li class="mb-4">
+            <img src="../../../src/Kanbas/northeastern.png" alt="profile-icon">
+        </li>
+        <li>
+            <a href="index.html">
+                <i class="fa fa-user fa-3x"></i>
+                Account
+            </a>
+        </li>
+        <li>
+            <a href="../dashboard/index.html">
+                <i class="fas fa-tachometer-alt fa-3x text-danger"></i>
+                DashBoard
+            </a>
+        </li>
+        <li class="highlight">
+            <a href="../home">
+                <i class="fa fa-book fa-3x text-danger"></i>
+                Courses
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-calendar fa-3x text-danger"></i>
+                Calendar
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-inbox fa-3x text-danger"></i>
+                Inbox
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-clock fa-3x text-danger"></i>
+                History
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-network-wired fa-3x text-danger"></i>
+                Studio
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-sign-out-alt fa-3x text-danger" ></i>
+                Commons
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-question-circle fa-3x text-danger"></i>
+                Help
+            </a>
+        </li>
+    </div>
+    <div class="grade-display w-100">
+        <div class="header">
+            <div class="header d-flex flex mt-3">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="nav-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-cog"><i class="fa fa-bars text-danger"></i></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="nav-dropdown">
+                        <li><a href="#" class="dropdown-item">Book Title</a></li>
+                        <li><a href="#" class="dropdown-item">Book Title</a></li>
+                        <li><a href="#" class="dropdown-item">Book Title</a></li>
+                        <li><a href="#" class="dropdown-item">Book Title</a></li>
+                        <li><a href="#" class="dropdown-item">Book Title</a></li>
+                    </ul>
+                </div>
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="me-auto">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../home/index.html">CS4550.12531.202410</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Grades</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <hr>
+        <div class="main-content d-flex flex-row">
+            <div class="middle-nav">
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="../assignments">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a class="highlight" href="../grade/index.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Settings</a></li>
+            </div>
+
+            <div class="grade container w-100">
+                <div class="mb-3 d-flex flex-row-reverse">
+                    <div class="d-block">
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-file-import"></i>
+                            Import
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-file-export"></i>
+                            Export
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="student-name"
+                               class="form-label align-content-center"">
+                        Student Names</label>
+                        <input type="email"
+                               class="form-control"
+                               id="student-name"
+                               placeholder="Search Student Names">
+                    </div>
+                    <div class="col-sm">
+                        <label for="assignment-name"
+                               class="form-label align-content-center">
+                            Assignment Name</label>
+                        <input type="email"
+                               class="form-control"
+                               id="assignment-name"
+                               placeholder="Search Assignment Name">
+                    </div>
+                </div>
+
+                <div class="mt-3 mb-3 d-flex">
+                    <button class="d-flex flex-row btn btn-secondary">
+                        <i class="fa fa-filter align-content-center me-2"></i>
+                        <p class="mb-0">Apply Filter</p>
+                    </button>
+                </div>
+
+                <div>
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col" class="text-center">Student Name</th>
+                            <th scope="col" class="text-center">
+                                A1 SETUP <br>
+                                Out of 100
+                            </th>
+                            <th scope="col" class="text-center">
+                                A2 HTML <br>
+                                Out of 100
+                            </th>
+                            <th scope="col" class="text-center">
+                                A3 CSS <br>
+                                Out of 100
+                            </th>
+                            <th scope="col" class="text-center">
+                                A4 Bootstrap <br>
+                                Out 100
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody class="content">
+                        <tr>
+                            <th scope="row"><a href="#">Mark Cuban</a></th>
+                            <td>100%</td>
+                            <td><input class="w-50" placeholder="98%"></td>
+                            <td>84%</td>
+                            <td>21%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">Michael Jordan</a></th>
+                            <td>100%</td>
+                            <td>89%</td>
+                            <td>84%</td>
+                            <td><input class="w-50" placeholder="98%"></td>
+                        <tr>
+                            <th scope="row"><a href="#">Travis Kelce</a></th>
+                            <td><input class="w-50" placeholder="98%"></td>
+                            <td>98%</td>
+                            <td>89%</td>
+                            <td>78%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">Jason Kelce</a></th>
+                            <td>45%</td>
+                            <td>78%</td>
+                            <td><input class="w-50" placeholder="78%"></td>
+                            <td>86%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">Benjamin Lerner</a></th>
+                            <td>78%</td>
+                            <td>68%</td>
+                            <td>80%</td>
+                            <td>76%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">Taylor Swift</a></th>
+                            <td>78%</td>
+                            <td>68%</td>
+                            <td>80%</td>
+                            <td>76%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">Juice Wrld</a></th>
+                            <td>78%</td>
+                            <td>68%</td>
+                            <td>80%</td>
+                            <td>76%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">Denzel Washington</a></th>
+                            <td>78%</td>
+                            <td>68%</td>
+                            <td>80%</td>
+                            <td>76%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

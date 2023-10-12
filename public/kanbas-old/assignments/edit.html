@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Assigment</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignments</title>
+    <link href="../common.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link href="edit.css" rel="stylesheet">
+    <link href="../kanbas-navigation/kanbas-navigation.css" rel="stylesheet">
+    <link href="../account-navigation/account-navigation.css" rel="stylesheet">
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel=stylesheet>
+</head>
+<body>
+
+<div class="flex-profile d-flex flex-row">
+    <div class="wd-left-side-navigation me-4">
+        <li class="mb-4">
+            <img src="../../../src/Kanbas/northeastern.png" alt="profile-icon">
+        </li>
+        <li>
+            <a href="index.html">
+                <i class="fa fa-user fa-3x"></i>
+                Account
+            </a>
+        </li>
+        <li>
+            <a href="../dashboard/index.html">
+                <i class="fas fa-tachometer-alt fa-3x text-danger"></i>
+                DashBoard
+            </a>
+        </li>
+        <li class="bg-white">
+            <a class="text-danger" href="../home">
+                <i class="fa fa-book fa-3x text-danger"></i>
+                Courses
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-calendar fa-3x text-danger"></i>
+                Calendar
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-inbox fa-3x text-danger"></i>
+                Inbox
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-clock fa-3x text-danger"></i>
+                History
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-network-wired fa-3x text-danger"></i>
+                Studio
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-sign-out-alt fa-3x text-danger"></i>
+                Commons
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-question-circle fa-3x text-danger"></i>
+                Help
+            </a>
+        </li>
+    </div>
+    <div class="profile-display">
+        <div class="header">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../home/index.html">CS4550.12531.202410</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                    <li class="breadcrumb-item active" aria-current="page">A1 - ENV + ...</li>
+                </ol>
+            </nav>
+            <hr>
+        </div>
+        <div class="main-content">
+            <div class="middle-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a class="highlight" href="../assignments">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="../grade">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Settings</a></li>
+            </div>
+
+            <div class="edit-assignment w-100">
+                <div class="d-flex">
+                    <div class="d-flex flex-row align-items-end ms-auto">
+                        <i class="fa fa-check-circle text-success fs-5 my-auto me-2" aria-hidden="true"></i>
+                        <p class="text-success fs-5 my-auto me-5 ">Published</p>
+                        <button class="btn btn-secondary my-auto">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <hr>
+                <div class="container justify-content-center">
+                    <div class="col mb-3">
+                        <p>Assignment Name</p>
+                        <input type="text" class="form-control mb-3" placeholder="A1 - ENV + HTML">
+                        <textarea class="form-control" rows="5">This assignment describe how to install the development environment for creating and working with the Web applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netlify</textarea>
+                    </div>
+                    <div class="bottom-content">
+                        <div class="row mb-3">
+                            <label for="static-point" class="point col-sm col-form-label ">Point</label>
+                            <input type="number" class="col ms-0" id="static-point" value="100">
+                        </div>
+                        <div class="row mb-3">
+                            <label for="assignment-group" class="col-form-label col-sm">Assignment Group</label>
+                            <select class="form-select col" id="assignment-group">
+                                <option selected>ASSIGNMENTS</option>
+                                <option value="1">QUIZ</option>
+                                <option value="2">TEST</option>
+                                <option value="3">NONE</option>
+                            </select>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="grade" class="col-sm col-form-label">Display Grade as</label>
+                            <select class="form-select col w-auto" id="grade">
+                                <option selected>Percentage</option>
+                                <option value="1">Letter</option>
+                                <option value="2">Complete</option>
+                                <option value="3">Incomplete</option>
+                            </select>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="check-assignment">
+                                <label class="form-check-label text-center col-form-label" for="flexCheckDefault">
+                                    Do not count this assignment toward the final grade
+                                </label>
+                                <input class="form-check-input text-center align-items-center" type="checkbox" value=""
+                                       id="flexCheckDefault">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col">
+                                Submission Type
+                            </label>
+
+                            <form class="form-group col border p-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-light border dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Online
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="text-entry">
+                                        <label class="form-check-label" for="text-entry">
+                                            Text Entry
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="website-url"
+                                               checked>
+                                        <label class="form-check-label" for="website-url">
+                                            Website Url
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="media-recording"
+                                               checked>
+                                        <label class="form-check-label" for="media-recording">
+                                            Media Recording
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="student-annotation"
+                                               checked>
+                                        <label class="form-check-label" for="student-annotation">
+                                            Student Annotation
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="file-uploads"
+                                               checked>
+                                        <label class="form-check-label" for="file-uploads">
+                                            File Uploads
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <label class="col">
+                                Assign
+                            </label>
+                            <div class="d-flex flex-column col w-75">
+                                <form class="form-check border p-3">
+                                    <div class="d-flex flex-column mb-2">
+                                        <label for="assign-to">
+                                            Assign to
+                                        </label>
+                                        <input type="text" class="form-control" id="assign-to"
+                                               placeholder="Example input">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="startDate">
+                                            Due
+                                        </label>
+                                        <input id="startDate" class="form-control" type="date"/>
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        <label for="available">
+                                            Available from
+                                        </label>
+                                        <input id="available" class="form-control" type="date"/>
+                                        <label for="until">
+                                            Until to
+                                        </label>
+                                        <input id="until" class="form-control" type="date"/>
+                                    </div>
+                                </form>
+                                <button class="btn btn-secondary">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex flex-row">
+                    <div class="form-check me-auto">
+                        <input class="form-check-input" type="checkbox" value="" id="notify">
+                        <label class="form-check-label" for="notify">
+                            Notify user that this content has changed
+                        </label>
+                    </div>
+                    <form class="form-group" id="submit-file" action="index.html">
+                        <button form="submit-file" type="submit" class="btn btn-secondary">Cancel</button>
+                        <button form="submit-file" type="submit" class="btn btn-danger">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
