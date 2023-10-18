@@ -1,6 +1,9 @@
 import {Link} from "react-router-dom";
 import "./Status.css"
-function Status(){
+import {FaBell, FaBullhorn, FaBullseye, FaFileExport, FaFileImport} from "react-icons/fa";
+import {FaChartColumn} from "react-icons/fa6";
+
+function Status() {
     const buttons = [
         'Importing Existing Content',
         'Importing From Commons',
@@ -10,18 +13,29 @@ function Status(){
         'New Analytics',
         'View Course Notifications',
     ];
-    return(
+
+    const icon = [
+         <FaFileExport/>,
+        <FaFileImport/>,
+        <FaBullseye/>,
+        <FaChartColumn/>,
+        <FaBullhorn/>,
+        <FaChartColumn/>,
+        <FaBell/>
+    ]
+    return (
         // d-none d-xl-block
         <div className="float-end w-25 ms-3">
             <ul className="list-group mb-2">
                 {
-                    buttons.map((button, index) =>(
+                    buttons.map((button, index) => (
                         <Link
                             to={"#"}
                             key={index}
                             className={"list-group-item list-group-item-light"}>
-                            <div className="d-flex flex-column p-2 text-danger mb-0">
-                                <p className="text-secondary">{button}</p>
+                            <div className="d-flex flex-row p-2  align-items-center">
+                                {icon[index]}
+                                <p className="text-secondary mb-0">{button}</p>
                             </div>
                         </Link>
                     ))
@@ -39,11 +53,11 @@ function Status(){
                 </div>
                 <hr/>
 
-                    <ul className="list-group">
-                        <li className="list-group-item border-0">Lecture CS4550.12631.202410 Sep 7 at 11:45am</li>
-                        <li className="list-group-item border-0">Lecture CS4550.12631.202410 Sep 11 at 11:45am</li>
-                        <li className="list-group-item border-0">CS5610 06 SP23 Lecture Sep 11 at 6pm</li>
-                    </ul>
+                <ul className="list-group">
+                    <li className="list-group-item border-0">Lecture CS4550.12631.202410 Sep 7 at 11:45am</li>
+                    <li className="list-group-item border-0">Lecture CS4550.12631.202410 Sep 11 at 11:45am</li>
+                    <li className="list-group-item border-0">CS5610 06 SP23 Lecture Sep 11 at 6pm</li>
+                </ul>
             </div>
         </div>
     )

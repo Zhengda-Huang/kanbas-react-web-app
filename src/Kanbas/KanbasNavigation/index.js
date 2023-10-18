@@ -38,6 +38,11 @@ function KanbasNavigation() {
                         </div>
                     </Link>
             ))}
+            <Link
+                to={`/Kanbas/`}
+                className={`list-group-item bg-dark text-white border-0`}
+                >
+            </Link>
         </div>
     );
 }
