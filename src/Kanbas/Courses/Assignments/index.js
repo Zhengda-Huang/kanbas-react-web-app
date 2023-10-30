@@ -1,13 +1,13 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
+import {Link, useParams} from "react-router-dom";
 import {FaBook, FaEllipsisV, FaPlus} from "react-icons/fa";
+import {useDispatch, useSelector} from "react-redux";
 import GreenCheck from "../../GreenCheck/GreenCheck";
-
-
+import {deleteAssignment} from "./assignmentReducer";
 function Assignments() {
-    const { courseId } = useParams();
-    const assignments = db.assignments;
+    const {courseId} = useParams();
+    const assignments = useSelector((state) => state.assignmentReducer.assignments);
+    const dispatch = useDispatch();
     const courseAssignments = assignments.filter(
         (assignment) => assignment.course === courseId);
     return (
@@ -22,10 +22,11 @@ function Assignments() {
                         <i className="fa fa-plus" aria-hidden="true"></i>
                         Group
                     </button>
-                    <button className="btn btn-danger">
+                    <Link className="btn btn-danger"
+                          to={`/Kanbas/Courses/${courseId}/Assignments/add`}>
                         <i className="fa fa-plus" aria-hidden="true"></i>
                         Assignment
-                    </button>
+                    </Link>
                     <button className="btn btn-secondary">
                         <FaEllipsisV/>
                     </button>
@@ -60,16 +61,23 @@ function Assignments() {
                                 <FaBook className="text-success"/>
                             </div>
 
-                            <div className="me-auto justify-content-center">
-                                    <h5>{assignment.title}</h5>
-                            </div>
+                        <div className="me-auto justify-content-center">
+                            <h5>{assignment.title}</h5>
+                            <p className="text-black">Due Date {assignment.dueDate}</p>
+                        </div>
 
-                            <div className="d-flex flex-row float-end align-items-center">
-                                <GreenCheck/>
-                                <FaEllipsisV/>
+                        <div className="d-flex flex-row float-end align-items-center">
+                            <div>
+                                <button className="btn btn-danger" onClick={(event) => {
+                                    dispatch(deleteAssignment(assignment._id))
+                                    event.preventDefault()
+                                }}>Delete</button>
                             </div>
+                            <GreenCheck/>
+                            <FaEllipsisV/>
+                        </div>
                     </Link>
-                ))}
+                    ))}
             </div>
         </div>
     );

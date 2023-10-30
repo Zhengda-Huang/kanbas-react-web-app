@@ -1,4 +1,3 @@
-import db from "../../Kanbas/Database";
 import {Navigate, useParams} from "react-router-dom";
 import Header from "../Header";
 import CourseNavigation from "../CourseNavigation";
@@ -9,10 +8,7 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
-
-function Courses() {
-    const {courseId} = useParams();
-    const course = db.courses.find((course) => course._id === courseId);
+function Courses({ courses }) {
     return (
         <div className={`ms-4 w-100`}>
             <Header/>
@@ -27,6 +23,10 @@ function Courses() {
                             <Route path="Assignments" element={<Assignments/>}/>
                             <Route
                                 path="Assignments/:assignmentId"
+                                element={<AssignmentEditor/>}
+                            />
+                            <Route
+                                path="Assignments/add"
                                 element={<AssignmentEditor/>}
                             />
                             <Route path="Grades" element={<Grades/>}/>
