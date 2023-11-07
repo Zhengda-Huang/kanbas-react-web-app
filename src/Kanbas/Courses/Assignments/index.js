@@ -1,15 +1,29 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Link, useParams} from "react-router-dom";
 import {FaBook, FaEllipsisV, FaPlus} from "react-icons/fa";
 import {useDispatch, useSelector} from "react-redux";
 import GreenCheck from "../../GreenCheck/GreenCheck";
-import {deleteAssignment} from "./assignmentReducer";
+import {deleteAssignment, setAssignments} from "./assignmentReducer";
+import {deleteAssignmentC, findAssignmentForCourse} from "./assignmentService";
 function Assignments() {
     const {courseId} = useParams();
     const assignments = useSelector((state) => state.assignmentReducer.assignments);
     const dispatch = useDispatch();
-    const courseAssignments = assignments.filter(
-        (assignment) => assignment.course === courseId);
+
+    const courseAssignments = useEffect(() => {
+        findAssignmentForCourse(courseId)
+            .then((assignments) =>
+                dispatch(setAssignments(assignments))
+            );
+    }, [courseId]);
+
+    const handleDelete = (assignmentId) =>{
+        console.log(assignmentId)
+        deleteAssignmentC(assignmentId).then((status) => {
+            dispatch(deleteAssignment(assignmentId));
+        });
+    }
+
     return (
         <div className="me-5">
             <div className="d-flex justify-content-between ">
@@ -50,7 +64,7 @@ function Assignments() {
                         <FaEllipsisV/>
                     </di>
                 </li>
-                {courseAssignments.map((assignment) => (
+                {assignments.map((assignment) => (
                     <Link
                         key={assignment._id}
                         to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
@@ -69,7 +83,7 @@ function Assignments() {
                         <div className="d-flex flex-row float-end align-items-center">
                             <div>
                                 <button className="btn btn-danger" onClick={(event) => {
-                                    dispatch(deleteAssignment(assignment._id))
+                                    dispatch(() => handleDelete(assignment._id))
                                     event.preventDefault()
                                 }}>Delete</button>
                             </div>

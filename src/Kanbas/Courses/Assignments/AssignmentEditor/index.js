@@ -1,20 +1,17 @@
 import React from "react";
-import {useNavigate, useParams, Link} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import GreenCheck from "../../../GreenCheck/GreenCheck";
 import {FaEllipsisV} from "react-icons/fa";
-import {useSelector, useDispatch} from "react-redux";
-import {
-    addAssignment,
-    setAssignment,
-    updateAssignment,
-} from "../assignmentReducer";
+import {useDispatch, useSelector} from "react-redux";
+import {addAssignment, setAssignment, updateAssignment,} from "../assignmentReducer";
+import {createAssignment, updateAssignmentC} from "../assignmentService";
+import {updateModule} from "../../../Modules/modulesReducer";
 
 
 function AssignmentEditor() {
     const {assignmentId} = useParams();
     const assignmentList = useSelector((state) => state.assignmentReducer.assignments);
     const assignmentState = useSelector((state) => state.assignmentReducer.assignment);
-    console.log(assignmentState)
     const findAssignment = assignmentList.find(
         (assignment) => assignment._id === assignmentId)
     const assignment = findAssignment ? findAssignment : assignmentState;
@@ -25,6 +22,22 @@ function AssignmentEditor() {
     const handleSave = () => {
         console.log("Actually saving assignment TBD in later assignments");
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+    };
+
+    const handleAddNewAssignment = (assignment, courseId) => {
+        createAssignment(courseId, assignment).then((assignment) => {
+            dispatch(addAssignment(assignment));
+        });
+    }
+
+    const handleUpdateAssignment = async () => {
+        console.log(assignmentState)
+        const status = await updateAssignmentC(assignment);
+        dispatch(updateAssignment(assignment));
+        setAssignment({
+            title: "Assignment", description: "New Description", dueDate: "2023-10-23",
+            availableFromDate: "2023-10-23", availableUntilDate: "2023-10-23"
+        })
     };
 
     return (
@@ -94,10 +107,8 @@ function AssignmentEditor() {
                     </Link>
                     <button onClick={(e) => {
                         assignmentList.find((assignmentInList) => assignmentInList._id === assignment._id) ?
-                            (dispatch(updateAssignment(assignmentState)) &&
-                            dispatch(setAssignment({ title: "Assignment", description: "New Description", dueDate: "2023-10-23",
-                                availableFromDate: "2023-10-23", availableUntilDate: "2023-10-23"}))):
-                        dispatch(addAssignment({...assignment, course: courseId}))
+                            dispatch(() => handleUpdateAssignment()) :
+                        dispatch(() => handleAddNewAssignment(assignmentState, courseId))
                         handleSave()
                         }
                     } className="btn btn-danger me-2">

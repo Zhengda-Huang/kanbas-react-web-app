@@ -7,8 +7,25 @@ import Home from "../Home/Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
-function Courses({ courses }) {
+function Courses() {
+    const {courseId} = useParams();
+    const API_BASE = process.env.REACT_APP_API_BASE;
+    const URL = `https://kanbas-node-server-app-4si3.onrender.com/api/courses`;
+    const [courses, setCourse] = useState({});
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
+
     return (
         <div className={`ms-4 w-100`}>
             <Header/>
@@ -16,8 +33,8 @@ function Courses({ courses }) {
             <div className="d-flex flex-row w-auto">
                 <CourseNavigation/>
                 <div className="w-100">
-                        <Routes>
-                            <Route path="/" element={<Navigate to="Home"/>}/>
+                    <Routes>
+                        <Route path="/" element={<Navigate to="Home"/>}/>
                             <Route path="Home" element={<Home/>}/>
                             <Route path="Modules" element={<ModuleList/>}/>
                             <Route path="Assignments" element={<Assignments/>}/>
